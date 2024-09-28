@@ -1,0 +1,187 @@
+.banner-body {
+    /* background: rgb(24,35,136); */
+    background: linear-gradient(
+      276.47deg,
+      #a2e3ff -21.96%,
+      #3461f3 19.55%,
+      #4354eb 80.6%
+    );
+    height: 60vh;
+    display: flex;
+    justify-content: space-around;
+    line-height: 30px;
+    border-radius: 20px;
+    padding: 1em;
+    margin-left: 35px;
+    margin-right: 35px;
+    
+  }
+  
+  
+  .banner-img {
+    height: 300px;
+    border-radius: 10px;
+  }
+  .inside-box {
+    border: 2px solid white;
+    justify-content: center;
+    align-items: center;
+    padding: 12px 13px;
+    border-radius: 10px;
+  }
+  .insideboxtxt{
+    text-align: center;
+    align-items: center;
+    color: #ffff;
+  }
+  .service-box{
+    border: 2px solid white;
+    justify-content: center;
+    align-items: center;
+    padding: 12px 5px;
+    border-radius: 10px;
+  }
+  .service-title{
+    font-size: 32px;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+  
+  /* html,
+  body {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100vh;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      background: rgba(0,212,255,1);
+  }
+  
+  .glow-on-hover {
+      width: 220px;
+      height: 50px;
+      border: none;
+      outline: none;
+      color: #fff;
+      background: rgba(0,212,255,1);
+      cursor: pointer;
+      position: relative;
+      z-index: 0;
+      border-radius: 10px;
+  }
+  
+  .glow-on-hover:before {
+      content: '';
+      background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+      position: absolute;
+      top: -2px;
+      left:-2px;
+      background-size: 400%;
+      z-index: -1;
+      filter: blur(5px);
+      width: calc(100% + 4px);
+      height: calc(100% + 4px);
+      animation: glowing 20s linear infinite;
+      opacity: 0;
+      transition: opacity .3s ease-in-out;
+      border-radius: 10px;
+  }
+  
+  .glow-on-hover:active {
+      color: #000
+  }
+  
+  .glow-on-hover:active:after {
+      background: transparent;
+  }
+  
+  .glow-on-hover:hover:before {
+      opacity: 1;
+  }
+  
+  .glow-on-hover:after {
+      z-index: -1;
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,212,255,1);
+      left: 0;
+      top: 0;
+      border-radius: 10px;
+  }
+  
+  @keyframes glowing {
+      0% { background-position: 0 0; }
+      50% { background-position: 400% 0; }
+      100% { background-position: 0 0; }
+  } */
+  
+  
+  
+  .main-containerdiv {
+    position: sticky; 
+    padding: 20px;
+    background-color: #fff; 
+   
+  }
+  
+  
+  .find-containerdiv {
+    background-color: #ffff;
+    padding: 20px 20px;
+    box-shadow: rgba(136, 136, 136, 0.2) 0px 2px 8px 0px;
+        border-radius: 10px;
+  }
+  
+  .Appoinmentbtn {
+    width: 100%;
+    background-color: #182388;
+    color: #ffff;
+    padding: 15px;
+    border-radius: 8px;
+    font-size: 18px;
+  }
+  .Appoinmentparatxt {
+    font-size: 13px;
+    text-align: center;
+    align-items: center;
+    color: gray;
+    margin: 8px 0px 0px 0px !important;
+    padding: 0px !important;
+  }
+  
+  .form-select {
+    padding: 11px !important;
+  }
+  .paraspantxt {
+    color: #90ddff;
+  }
+  
+  .clinic-img{
+    height:100px;
+  
+  }
+  .consultation-container {
+    display: grid;
+     grid-template-columns: repeat(6, 1fr);
+    gap: 40px; 
+  }
+  
+  .consultation-item {
+    text-align: center; 
+  }
+  .slider-imag{
+    border-radius: 10px;
+    height: 450px;
+  }
+  .slider-imag1{
+    border-radius: 10px;
+    height: 150px;
+  }
+  .first-box{
+    display: flex;
+  }

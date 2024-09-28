@@ -1,0 +1,26 @@
+.inside-form{
+    background-color: #F7F7F7;
+    height: auto;
+    margin-left: 17%;
+}
+
+@media (max-width:768px){
+    .inside-form{
+        margin-left: 0%;
+    }
+ }
+ .form-img{
+    margin-left: 33%;
+ }
+
+.form-div{
+ 
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+    align-items: center;
+   
+
+}
+.doctor-form{
+    width: 400px;
+}

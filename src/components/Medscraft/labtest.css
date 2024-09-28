@@ -1,0 +1,230 @@
+.lab-banner {
+    background: linear-gradient(
+      276.47deg,
+      #f8d6df -21.96%,
+      #ee9db2 19.55%,
+      #dd6f8c 80.6%
+    );
+    /* height: 60vh; */
+    display: flex;
+    justify-content: space-around;
+    line-height: 30px;
+    /* border-radius: 20px; */
+    padding: 2em;
+  }
+  
+  .banner-img1 {
+    height: 280px;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 100%;
+    object-fit: cover;
+  }
+  
+  .insideboxtxt1{
+    text-align: center;
+    align-items: center;
+    color: #e2e3ee;
+    border: 2px solid #e3e4ec;
+    justify-content: center;
+    align-items: center;
+    padding: 12px 16px;
+    border-radius: 10px;
+    background-color: #E78BA3;
+  }
+  .insideboxtx1:hover{
+    background-color: #88787c;
+    border-radius:0%
+  }
+  @media (max-width: 768px) {
+    .lab-banner {
+      flex-direction: column;
+      height: auto;
+      padding: 1em;
+    }
+  
+    .inside-box {
+      width: 100%;
+      max-width: 100%;
+      margin-top: 1rem;
+    }
+  
+    .banner-img {
+      height: 200px;
+      width: 100%;
+    }
+  
+    h2,
+    h4 {
+      text-align: center;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .lab-banner {
+      padding: 1em;
+    }
+  
+    .banner-img {
+      height: 150px;
+      width: 100%;
+    }
+  
+    .inside-box {
+      font-size: 14px;
+      width: 100%;
+    }
+  
+    h2 {
+      font-size: 1.5rem;
+    }
+  
+    h4 {
+      font-size: 1.1rem;
+    }
+  }
+  
+  .how-banner {
+    color: white;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+  }
+  
+  p {
+    font-size: 18px;
+    margin-bottom: 40px;
+  }
+  
+  .steps {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .step {
+    text-align: center;
+  }
+  
+  .step img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+  }
+  
+  .step h2 {
+    font-size: 24px;
+    margin-bottom: 5px;
+  }
+  
+  .card {
+    /* border: 1px solid gray; */
+    /* width: 250px; */
+    padding: 1em;
+    align-items: center;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+      rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  }
+  
+  .q-img {
+    height: 90px;
+    width: 90px;
+  }
+  .q-img:hover {
+    height: 100px;
+    width: 100px;
+  }
+  .swiper-button-prev::after {
+    display: none;
+  }
+  .swiper-button-prev::before {
+    display: none;
+  }
+  .swiper-button-next:after {
+    display: none;
+  }
+  .swiper-button-next::before {
+    display: none;
+  }
+  .card-swipe {
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+      rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    border-radius: 10px;
+  }
+  .swiper-img {
+    height: 100px;
+  }
+  .card-swipe h5 {
+    color: linear-gradient(
+      276.47deg,
+      #f8d6df -21.96%,
+      #ee9db2 19.55%,
+      #dd6f8c 80.6%
+    );
+  }
+  
+  .main-containerdiv {
+    position: sticky;
+    top: 0%;
+    right: 0;
+    width: auto;
+    padding: 20px;
+    background-color: #fff;
+    z-index: 1000;
+    height: 130vh;
+    /* overflow-y: auto; */
+  }
+  @media screen and (max-width: 768px) {
+    .main-containerdiv {
+      height: auto;
+      width: 100%;
+    }
+  }
+  @media screen and (max-width: 998px) {
+    .main-containerdiv {
+      height: auto;
+      width: 100%;
+    }
+  }
+  
+  @media screen and (max-width: 1024px) {
+    .main-containerdiv {
+      height: auto;
+      width: 100%;
+    }
+  }
+  .find-containerdiv {
+    background-color: #ffff;
+    padding: 20px 20px;
+    box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+    border-radius: 10px;
+  }
+  
+  .Appoinmentbtn {
+    width: 100%;
+    background-color: #182388;
+    color: #ffff;
+    padding: 15px;
+    border-radius: 8px;
+    font-size: 18px;
+  }
+  .Appoinmentparatxt {
+    font-size: 13px;
+    text-align: center;
+    align-items: center;
+    color: gray;
+    margin: 8px 0px 0px 0px !important;
+    padding: 0px !important;
+  }
+  
+  .form-select {
+    padding: 11px !important;
+  }
+  .paraspantxt {
+    color: #90ddff;
+  }

@@ -1,0 +1,117 @@
+.foot-logo {
+    height: 60px;
+    max-width: 100%;
+    /* padding: 20px; */
+    margin-left: 20px;
+}
+
+.foot-bg {
+    background: #3D4461;
+    /* padding: 30px 30px 30px 30px; */
+}
+
+.foot-head {
+    color: #fff;
+    font-size: 23px;
+    margin: 0;
+    font-weight: 700;
+    line-height: 1.5;
+    font-style: normal;
+    font-family: 'Lato', Arial, Helvetica, sans-serif;
+}
+
+.foot-addres1 {
+    color: #fff;
+    font-style: normal;
+    line-height: 1.5;
+    font-size: 12px;
+}
+
+.element {
+    font-size: 20px;
+    font-weight: 300;
+    color: #fff;
+    line-height: 1.7;
+}
+
+.element:hover {
+    color: blue;
+}
+
+/* .foot-head{
+    color: #fff;
+    font-size: 23px;
+    margin: 0;
+    font-weight: 700;
+    line-height: 1.5;
+    font-style: normal;
+    font-family: 'Lato', Arial, Helvetica, sans-serif;
+}
+.foot-addres1{
+    color: #fff;
+    font-style: normal; 
+    line-height: 1;
+}
+.foot-email{
+    color: #27c5f1;
+}
+.foot-no{
+    color: #fff;
+}
+.foot-input{
+    z-index: 1;
+    height: 44px;
+    font-size: 14px;
+    border-radius: 4px;
+    position: relative;
+    padding: 10px 65px 10px 17px;
+}
+.foot-head2{
+    color: #fff;
+    font-size: 20px;
+    font-weight: 400;
+    margin: 0;
+    line-height: 18px;
+}
+.foot-head-3{
+    color: #fff;
+    font-size: 20px;
+    font-weight: 400;
+    margin: 0;
+    line-height: 18px;
+}
+.head3-para{
+    color: #fff;
+    font-style: 14px;
+}
+.phone-icn{
+    margin-right: 20px;
+}
+ */
+.imnplay {
+    max-width: 110px;
+    border-radius: 4px;
+}
+
+.copyright {
+    color: #fff;
+    margin: 0;
+    color: #fff;
+    display: block;
+    padding: 14px 12px;
+    text-align: center;
+    font-family: 'Lato', Arial, Helvetica, sans-serif !important;
+
+}
+
+.foot-link {
+    color: #fff;
+    font-size: 26px;
+    line-height: normal;
+
+}
+
+.foot-input {
+    height: 25vh;
+
+}

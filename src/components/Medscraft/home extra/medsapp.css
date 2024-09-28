@@ -1,0 +1,26 @@
+.medsh1{
+    font-size: 35px;
+    line-height: 45px;
+    margin-bottom: 14px;
+    margin-top: 20px;
+    color: #3EB7EB;
+}
+.medsh2{
+    font-size: 35px;
+    line-height: 45px;
+    margin-bottom: 14px;
+    margin-top: 20px;
+    color: #E07C96;
+}
+.medspara{
+    color: #13A7E7;
+    font-size: 16px;
+    line-height: 1.65;
+    letter-spacing: normal;
+    font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+   margin-right: 10px;
+}
+.implay{
+    margin-left: 15px;
+    border-radius: 5px;
+}

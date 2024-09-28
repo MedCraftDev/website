@@ -1,0 +1,20 @@
+.single-icon{
+	font-size: 50px;
+    color: #1a76d1;
+	/* position: absolute; */
+    /* left: 50%; */
+    /* margin-left: -50px; */
+    /* top: 0; */
+    height: 100px;
+    width: 100px;
+    line-height: 100px;
+    text-align: center;
+	margin-left: 10%;
+    border: 1px solid #dddddd;
+    border-radius: 100%;
+}
+.Feautes .single-features {
+    text-align: center;
+    position: relative;
+    padding: 10px 20px;
+}

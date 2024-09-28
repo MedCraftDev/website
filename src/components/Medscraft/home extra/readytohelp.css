@@ -1,0 +1,33 @@
+.help-Title {
+    font-size: 25px;
+    font-weight: 600;
+    line-height: 1.3rem;
+
+}
+
+.help-para {
+    text-align: start;
+    font-size: 15px;
+    color: #7580A1;
+    line-height: 1.5rem;
+    /* font-family: 300; */
+
+}
+.truck-icon{
+    border: 1px solid #E3E3E3;
+    border-radius: 50%;
+    font-size: 34px;
+    padding: 25px;
+    color: #1a76d1;
+}
+/* .card-content1{
+    display: flex;
+    justify-items: center;
+    align-items: center;
+} */
+/* @media screen and(min-width:320px) and (max-width:768px) {
+    .truck-icon{
+        margin-left: 30px;
+    }
+    
+ } */

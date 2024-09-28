@@ -1,0 +1,205 @@
+.diseases {
+    text-align: left;
+    margin-top: 50px;
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.consult-button {
+    background-color: white;
+    color: #3369b7;
+    border: none;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.cardds1-container {
+    display: flex;
+    overflow-x: auto;
+    -ms-overflow-style: none;  /* Hide scrollbar in Internet Explorer and Edge */
+    scrollbar-width: none;  /* Hide scrollbar in Firefox */
+}
+
+.cardds1-container::-webkit-scrollbar {
+    display: none;  /* Hide scrollbar in Chrome, Safari, and Opera */
+}
+
+.cardd1 {
+    flex: 0 0 auto;
+    width: 150px;
+    margin-right: 10px;
+    padding: 10px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.cardd1:hover {
+    transform: scale(1.05);
+}
+
+.cardd1-img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+    transition: width 0.3s ease;
+}
+
+.cardd1-img:hover {
+    width: 110%;
+}
+
+.title {
+    font-size: 14px;
+    margin-bottom: 10px;
+    padding: 20px 0 15px 0;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 1200px) {
+    .cardd1 {
+        width: 100%;
+    }
+
+    .view-all-button {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 992px) {
+    .cardd1 {
+        width: 100%;
+    }
+
+    .view-all-button {
+        padding: 6px 12px;
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 768px) {
+    .cardd1 {
+        width: 100%;
+    }
+
+    .view-all-button {
+        width: 100%;
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    .cardd1-img {
+        width: 70%;
+        margin-bottom: 5px;
+    }
+}
+
+@media (max-width: 576px) {
+    a.cardd1.offer {
+        padding: 0px;
+        margin-right: 10px;
+        margin-top: 26px;
+    }
+    .cardd1-img.offer{margin-right: 20px;border-radius: 16px;}
+    .diseases-header {
+        padding-right: 20px;
+    }
+.diseasesoffer{display: block;}
+    .cardds1-container {
+        overflow-x: auto;
+        flex-wrap: nowrap;
+        margin-bottom: 20px;
+    }
+
+    .cardd1 {
+        width: 90%;
+        
+    }
+
+    .view-all-button {
+        padding: 5px 10px;
+        font-size: 12px;
+    }
+
+    h1 {
+        font-size: 18px;
+        font-weight: 600;
+    }
+
+    .title {
+        font-size: 12px;
+        padding: 15px 0 10px 0;
+        width: 121px;
+    }
+
+    .cardd1-img {
+        width: 100%;
+            margin-bottom: 20px;
+            height: 161.89px;
+}
+}
+
+@media (max-width: 480px) {
+ 
+
+    .cardd1-img {
+        margin-bottom: 0px;
+    }
+
+    .view-all-button {
+        padding: 5px 10px;
+        font-size: 12px;
+    }
+
+    h1 {
+        font-size: 18px;
+    }
+
+    .title {
+        font-size: 12px;
+        padding: 10px 0 5px 0;
+    }
+
+    .consult-button {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 380px) {
+    .cardd1 {
+        padding: 10px;
+        margin: 0px;
+        width: 90%;
+    }
+
+    .cardd1-img {
+        width: 100%;
+        margin-bottom: 0px;
+    }
+
+    .view-all-button {
+        margin-bottom: 10px;
+    }
+
+    h1 {
+        font-size: 15px;
+    }
+
+    .title {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 320px) {
+    .cardd1 {
+        padding: 10px;
+    }
+
+    .cardd1-img {
+        margin-bottom: 0px;
+    }
+}
