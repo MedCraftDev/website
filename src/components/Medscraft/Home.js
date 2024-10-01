@@ -72,7 +72,7 @@ export default function Home() {
        <Joinushome/>
       </div> */}
       <Tabs />
-      <Homeslider />
+      <Homeslider className="mt-3"/>
       <Diseases />
       {/* <Offer /> */}
 

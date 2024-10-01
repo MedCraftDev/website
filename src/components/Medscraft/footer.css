@@ -6,7 +6,7 @@
 }
 
 .foot-bg {
-    background: #3D4461;
+    background: #214aef;
     /* padding: 30px 30px 30px 30px; */
 }
 
@@ -28,10 +28,12 @@
 }
 
 .element {
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 300;
     color: #fff;
     line-height: 1.7;
+    font-style: normal;
+    font-family: 'Lato', Arial, Helvetica, sans-serif;
 }
 
 .element:hover {

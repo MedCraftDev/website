@@ -1,4 +1,4 @@
-import { useEffect ,useState} from "react";
+import { useEffect, useState,useRef } from "react";
 import Aos from "aos";
 import "aos/dist/aos.css";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -30,7 +30,9 @@ import s4 from "../../assets/img/images/s6.png";
 import s5 from "../../assets/img/images/s8.png";
 import s6 from "../../assets/img/images/s9.png";
 
-export default function Labtest(){
+export default function Labtest() {
+  const appointmentRef = useRef(null);
+
   useEffect(() => {
     Aos.init({
       duration: 500,
@@ -44,7 +46,7 @@ export default function Labtest(){
     location: "",
     area: "",
     labTest: "",
-    description: ""
+    description: "",
   });
   const [errors, setErrors] = useState({}); // For validation errors
 
@@ -62,7 +64,7 @@ export default function Labtest(){
     });
     setErrors({
       ...errors,
-      [name]: ""
+      [name]: "",
     });
   };
 
@@ -86,13 +88,16 @@ export default function Labtest(){
     }
 
     try {
-      const response = await fetch("https://medscraft-medscraftserver.fcxl63.easypanel.host/api/labtests", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formData),
-      });
+      const response = await fetch(
+        "https://medscraft-medscraftserver.fcxl63.easypanel.host/api/labtests",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(formData),
+        }
+      );
 
       const result = await response.json();
       if (response.ok) {
@@ -110,7 +115,7 @@ export default function Labtest(){
           location: "",
           area: "",
           labTest: "",
-          description: ""
+          description: "",
         });
       } else {
         Swal.fire({
@@ -131,9 +136,15 @@ export default function Labtest(){
     }
   };
 
+  const scrollToAppointment = () => {
+    if (appointmentRef.current) {
+      appointmentRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <>
-      <div className="container-fluid p-5 ">
+      <div className="container-fluid p-5">
         <div className="row lab-banner">
           <div className="col-lg-7 col-md-6 col-sm-12 mt-2">
             <h2 className="text-light mt-3">
@@ -143,14 +154,18 @@ export default function Labtest(){
               Talk to our care expert today to book your consultation. All
               insurance accepted
             </h4>
-            <div className="col-lg-7 col-md-10 col-12 col-sm-12  mt-5">
-                <a className="insideboxtxt1" href="tel:8088435500">
-                  Reach out to Us On <span> 8088435500</span>
-                </a>
-              </div>
+            <div className="mt-5">
+              <a className="insideboxtxt1"  onClick={scrollToAppointment}>
+              Book Your Appointment
+              </a>
+            </div>
           </div>
           <div className="col-lg-5 col-md-6 col-sm-12 d-flex justify-content-center mt-2">
-            <img src={bannerimg1} className="banner-img1" alt="Banner" />
+            <img
+              src={bannerimg1}
+              className="banner-img1 img-fluid"
+              alt="Banner"
+            />
           </div>
         </div>
       </div>
@@ -159,7 +174,7 @@ export default function Labtest(){
 
       <div className="container-fluid mb-4">
         <div className="row mt-4 ">
-          <div className="col-lg-8 col-md-12 col-sm-12 col-12">
+          <div className="col-lg-8 col-md-12 col-sm-12 col-12 order-last order-md-first">
             <div className="how-banner">
               <h4 className="h4-h">We Made Simple</h4>
               <h1>How It Works</h1>
@@ -228,7 +243,7 @@ export default function Labtest(){
             <div className="swiper-contene mt-5">
               <h2 style={{ color: " #dd6f8c" }}>Search Test and Packages :</h2>
               <Swiper
-              className="mt-4"
+                className="mt-4"
                 modules={[Navigation, Pagination, Scrollbar, A11y]}
                 spaceBetween={50}
                 slidesPerView={3}
@@ -309,8 +324,8 @@ export default function Labtest(){
 
           {/* Book you consultation */}
 
-          <div className="col-lg-4 col-md-12 col-sm-12 col-12 main-containerdiv mt-5">
-            <div className="find-containerdiv ">
+          <div className="col-lg-4 col-md-12 col-sm-12 col-12 main-containerdiv13 order-lg-first order-md-last mt-5"  ref={appointmentRef}>
+            <div className="find-containerdiv13">
               <h3 className="text-center">Book your consultation today</h3>
               <form onSubmit={handleSubmit}>
                 <div>
@@ -320,9 +335,13 @@ export default function Labtest(){
                     value={formData.name}
                     onChange={handleInputChange}
                     placeholder="Enter Your Name"
-                    className={`mt-3 form-control ${errors.name && "is-invalid"}`}
+                    className={`mt-3 form-control ${
+                      errors.name && "is-invalid"
+                    }`}
                   />
-                  {errors.name && <small className="text-danger">{errors.name}</small>}
+                  {errors.name && (
+                    <small className="text-danger">{errors.name}</small>
+                  )}
                 </div>
                 <div>
                   <input
@@ -331,9 +350,13 @@ export default function Labtest(){
                     value={formData.mobile}
                     onChange={handleInputChange}
                     placeholder="Enter Your Mobile No"
-                    className={`mt-3 form-control ${errors.mobile && "is-invalid"}`}
+                    className={`mt-3 form-control ${
+                      errors.mobile && "is-invalid"
+                    }`}
                   />
-                  {errors.mobile && <small className="text-danger">{errors.mobile}</small>}
+                  {errors.mobile && (
+                    <small className="text-danger">{errors.mobile}</small>
+                  )}
                 </div>
                 <div>
                   <input
@@ -352,22 +375,30 @@ export default function Labtest(){
                     value={formData.age}
                     onChange={handleInputChange}
                     placeholder="Enter Your Age"
-                    className={`mt-3 form-control ${errors.age && "is-invalid"}`}
+                    className={`mt-3 form-control ${
+                      errors.age && "is-invalid"
+                    }`}
                   />
-                  {errors.age && <small className="text-danger">{errors.age}</small>}
+                  {errors.age && (
+                    <small className="text-danger">{errors.age}</small>
+                  )}
                 </div>
                 <div>
                   <select
                     name="location"
                     value={formData.location}
                     onChange={handleInputChange}
-                    className={`form-select mt-3 ${errors.location && "is-invalid"}`}
+                    className={`form-select mt-3 ${
+                      errors.location && "is-invalid"
+                    }`}
                   >
                     <option value="">Location</option>
                     <option value="Bangalore">Bangalore</option>
                     <option value="Gurugram">Gurugram</option>
                   </select>
-                  {errors.location && <small className="text-danger">{errors.location}</small>}
+                  {errors.location && (
+                    <small className="text-danger">{errors.location}</small>
+                  )}
                 </div>
                 <div>
                   <input
@@ -376,9 +407,13 @@ export default function Labtest(){
                     value={formData.area}
                     onChange={handleInputChange}
                     placeholder="Your Area"
-                    className={`mt-3 form-control ${errors.area && "is-invalid"}`}
+                    className={`mt-3 form-control ${
+                      errors.area && "is-invalid"
+                    }`}
                   />
-                  {errors.area && <small className="text-danger">{errors.area}</small>}
+                  {errors.area && (
+                    <small className="text-danger">{errors.area}</small>
+                  )}
                 </div>
                 <div>
                   <input
@@ -387,9 +422,13 @@ export default function Labtest(){
                     value={formData.labTest}
                     onChange={handleInputChange}
                     placeholder="Enter Lab Test"
-                    className={`mt-3 form-control ${errors.labTest && "is-invalid"}`}
+                    className={`mt-3 form-control ${
+                      errors.labTest && "is-invalid"
+                    }`}
                   />
-                  {errors.labTest && <small className="text-danger">{errors.labTest}</small>}
+                  {errors.labTest && (
+                    <small className="text-danger">{errors.labTest}</small>
+                  )}
                 </div>
                 <div>
                   <textarea
@@ -405,7 +444,8 @@ export default function Labtest(){
                     Book Appointment
                   </button>
                   <p className="Appoinmentparatxt">
-                    By submitting the form, you agree MedsCraft <span className="paraspantxt">T&C</span>
+                    By submitting the form, you agree MedsCraft{" "}
+                    <span className="paraspantxt">T&C</span>
                   </p>
                 </div>
               </form>
@@ -471,5 +511,4 @@ export default function Labtest(){
       </div>
     </>
   );
-};
-
+}

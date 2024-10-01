@@ -97,7 +97,7 @@
   
   
   
-  .main-containerdiv2 {
+  .main-containerdiv12 {
     position: sticky; 
     top: 0%; 
     right: 0; 
@@ -108,9 +108,18 @@
     height: 65vh; 
     /* overflow-y: auto;  */
   }
+
+  @media screen and (max-width: 768px) {
+    .main-containerdiv12 {
+      position: relative; /* Change to relative on mobile to avoid sticky */
+      height: auto; /* Allow height to adjust based on content */
+      width: 100%; /* Full width on mobile */
+      padding: 10px; /* Adjust padding for mobile */
+    }
+  }
   
   
-  .find-containerdiv {
+  .find-containerdiv12 {
     background-color: #ffff;
     padding: 20px 20px;
     box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
@@ -141,19 +150,45 @@
     color: #90ddff;
   }
   
-  .clinic-img{
-    height:100px;
-  
+  .clinic-img {
+    height: 100px;
   }
+  
   .consultation-container {
     display: grid;
-     grid-template-columns: repeat(6, 1fr);
-    gap: 40px; 
+    grid-template-columns: repeat(6, 1fr); /* Default: 6 columns */
+    gap: 40px;
+  }
+  
+  /* Media Queries for Responsive Design */
+  @media screen and (max-width: 1200px) {
+    .consultation-container {
+      grid-template-columns: repeat(4, 1fr); /* 4 columns for medium screens */
+    }
+  }
+  
+  @media screen and (max-width: 992px) {
+    .consultation-container {
+      grid-template-columns: repeat(3, 1fr); /* 3 columns for smaller screens */
+    }
+  }
+  
+  @media screen and (max-width: 768px) {
+    .consultation-container {
+      grid-template-columns: repeat(2, 1fr); /* 2 columns for mobile screens */
+    }
+  }
+  
+  @media screen and (max-width: 576px) {
+    .consultation-container {
+      grid-template-columns:  repeat(3, 1fr);/* 1 column for extra small screens */
+    }
   }
   
   .consultation-item {
-    text-align: center; 
+    text-align: center;
   }
+  
   .slider-imag{
     border-radius: 10px;
     height: 450px;

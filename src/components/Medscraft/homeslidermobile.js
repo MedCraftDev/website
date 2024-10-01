@@ -26,7 +26,7 @@ const AutoSlideImageCarousel = () => {
   };
 
   return (
-    <div>
+    <div className='mt-5'>
       <Slider {...settings} className='mt-5'>
         {images.map((image, index) => (
           <div key={index}>

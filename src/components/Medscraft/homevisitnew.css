@@ -74,29 +74,42 @@
     margin-right: 35px;
     
   }
+
+
+@media (max-width: 576px) { 
+  .banner-body1 {
+    padding: 10px !important; 
+    margin-bottom: 20px; 
+     /* flex-wrap: nowrap; */
+  }
+
+  .banner-body1 h2, 
+  .banner-body1 h4 {
+    font-size: 1.2rem; 
+    line-height: 1.3;  
+  }
+
+  .banner-body1 .insideboxtxt {
+    font-size: 1rem; 
+  }
+
+  .banner-img {
+    max-width: 90%; 
+    height: auto;  
+  }
+
+  .container-fluid {
+    padding: 0 !important; 
+}
+
   
   
   .banner-img {
-    height: 300px;
+    height: 200px;
     border-radius: 10px;
   }
  
-  .insideboxtxt{
-    text-align: center;
-    display: flex;
-    align-items: center;
-    color: #e2e3ee;
-    border: 2px solid #e3e4ec;
-    justify-content: center;
-    align-items: center;
-    padding: 12px 16px;
-    border-radius: 10px;
-    background-color: #4354EB;
-  }
-  .insideboxtxt:hover{
-    background-color: #5a6096;
-    border-radius:0%
-  }
+
   .service-box{
     border: 2px solid white;
     justify-content: center;
@@ -109,7 +122,20 @@
     font-weight: 700;
     text-transform: uppercase;
   }
-  
+}
+  .insideboxtxt{
+    text-align: center;
+    display: flex;
+    align-items: center;
+    color: #e2e3ee;
+    border: 2px solid #e3e4ec;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 10px;
+    border-radius: 10px;
+    background-color: #4354EB;
+  }
+ 
   /* html,
   body {
       margin: 0;
@@ -184,67 +210,67 @@
   } */
   
   
-  .main-containerdivh {
-    position: sticky;
-    top: 0%;
-    right: 0;
-    width: auto;
+  /* Main container styling for larger screens */
+  .main-containerdivh1 {
+    position: sticky; 
+    top: 0%; 
+    right: 0; 
+    width:auto; 
     padding: 20px;
-    background-color: #fff;
-    z-index: 1000;
-    height: 65vh;
-    /* overflow-y: auto; */
+    background-color: #fff; 
+    z-index: 1000; 
+    height: 65vh; 
+
   }
+  
   @media screen and (max-width: 768px) {
-    .main-containerdiv {
-      height: auto;
-      width: 100%;
-    }
-  }
-  @media screen and (max-width: 998px) {
-    .main-containerdiv {
-      height: auto;
-      width: 100%;
+    .main-containerdivh1 {
+      position: relative; /* Change to relative on mobile to avoid sticky */
+      height: auto; /* Allow height to adjust based on content */
+      width: 100%; /* Full width on mobile */
+      padding: 10px; /* Adjust padding for mobile */
     }
   }
   
-  @media screen and (max-width: 1024px) {
-    .main-containerdiv {
-      height: auto;
-      width: 100%;
-    }
-  }
-  .find-containerdiv {
-    background-color: #ffff;
-    padding: 20px 20px;
-    box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
-    border-radius: 10px;
-  }
-  
-  .Appoinmentbtn {
-    width: 100%;
-    background-color: #182388;
-    color: #ffff;
-    padding: 15px;
-    border-radius: 8px;
-    font-size: 18px;
-  }
-  .Appoinmentparatxt {
-    font-size: 13px;
-    text-align: center;
-    align-items: center;
-    color: gray;
-    margin: 8px 0px 0px 0px !important;
-    padding: 0px !important;
-  }
-  
-  .form-select {
-    padding: 11px !important;
-  }
-  .paraspantxt {
-    color: #90ddff;
-  }
-  .visithh{
-    color: #3461f3;
-  }
-  
+
+/* Find container styling */
+.find-containerdiv1 {
+  background-color: #ffff; /* Background color */
+  padding: 20px; /* Padding */
+  box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px; /* Shadow */
+  border-radius: 10px; /* Rounded corners */
+}
+
+/* Appointment button styling */
+.Appoinmentbtn {
+  width: 100%; /* Full width */
+  background-color: #182388; /* Button background color */
+  color: #ffff; /* Button text color */
+  padding: 15px; /* Button padding */
+  border-radius: 8px; /* Rounded corners */
+  font-size: 18px; /* Font size */
+}
+
+/* Appointment paragraph text styling */
+.Appoinmentparatxt {
+  font-size: 13px; /* Font size */
+  text-align: center; /* Center alignment */
+  align-items: center; /* Center alignment */
+  color: gray; /* Text color */
+  margin: 8px 0 0 0 !important; /* Margin */
+  padding: 0 !important; /* Padding */
+}
+
+/* Form select styling */
+.form-select {
+  padding: 11px !important; /* Padding */
+}
+
+/* Text styling for specific classes */
+.paraspantxt {
+  color: #90ddff; /* Text color */
+}
+
+.visithh {
+  color: #3461f3; /* Text color */
+}

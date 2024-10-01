@@ -23,8 +23,8 @@ export default  function FaqNew(){
               <h2 className="h1 mb-3">How can we help you?</h2>
               <p className="lead fs-4 text-secondary mb-5">
                 We hope you have found an answer to your question. If you
-                need any help, please{" "}
-                <span
+                need any help, please.{" "}
+                {/* <span
                   style={{
                     cursor: "pointer",
                     color: "#3974cb",
@@ -33,8 +33,8 @@ export default  function FaqNew(){
                   onClick="location.href='#contact';"
                 >
                   contact us
-                </span>
-                .
+                </span> */}
+                
               </p>
               <div
                 className="accordion accordion-flush"

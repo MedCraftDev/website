@@ -60,7 +60,7 @@ const Tabs = () => {
       title: "Family Health Manager",
       img: FamilyCoverage,
       description: "Family doctor consultations.",
-      link: "/"
+      link: "/familymanager"
     },
     // {
     //   name: "ABDM",

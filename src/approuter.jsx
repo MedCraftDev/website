@@ -129,6 +129,7 @@ import EditClinic from "./components/clinic/EditClinic";
 import ClinicProfile from "./components/clinic/ClinicProfile";
 import HomevisitNew from "./components/Medscraft/homevisitnew";
 import Labtest from "./components/Medscraft/labtest";
+import Familymanager from "./components/Medscraft/familymanager";
 import SymptomsSpecialities from "./components/Medscraft/SymptomsSpecialites";
 import Registerform from "./components/Medscraft/registerform";
 import ResponsiveNavbar from "./components/Medscraft/Header";
@@ -155,7 +156,8 @@ const AppRouter = () => {
     "/abdm",
     "/diseases",
     "/book-appointment",
-    "/registerform"
+    "/registerform",
+    "/familymanager"
   ];
 
   // Define the routes for which you want to show the Auth Header/Footer
@@ -185,6 +187,7 @@ const AppRouter = () => {
         <Route path="/homevisit" element={<HomevisitNew />} />
         <Route path="/Clinic Consultation" element={[<ResponsiveNavbar/>,<FindDoctor />,<FooterBar/>]} />
         <Route path="/labTest" element={<Labtest />} />
+        <Route path="/familymanager" element={<Familymanager />} />
         <Route path="/virtualvisit" element={<VirtualVisit />} />
         {/* <Route path="/forgotpassword" element={<ForgotPassword />} /> */}
         {/* <Route path="/login" element={<Login />} /> */}

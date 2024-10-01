@@ -1,10 +1,10 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect ,useRef} from "react";
 import $ from "jquery";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "slick-carousel";
 import Swal from "sweetalert2";
-import '../../assets/css/doctorconsult.css';
+import "../../assets/css/doctorconsult.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import bannerimg1 from "../../assets/img/Doctors-pana.svg";
 import Pregnancy from "../../assets/img/diseases-image/pregnancy.png";
@@ -18,16 +18,16 @@ import doctor2 from "../../assets/img/doctor2.jpg";
 import doctor3 from "../../assets/img/doctor3.jpg";
 import doctor11 from "../../assets/img/images/big1.webp";
 
-
-
 const FindDoctor = () => {
+  
+  const appointmentRef = useRef(null);
   const [formData, setFormData] = useState({
     name: "",
     mobile: "",
     email: "",
     age: "",
     location: "",
-    area: ""
+    area: "",
   });
 
   const [errors, setErrors] = useState({}); // Error state
@@ -36,12 +36,12 @@ const FindDoctor = () => {
     const { name, value } = e.target;
     setFormData({
       ...formData,
-      [name]: value
+      [name]: value,
     });
     // Clear error when the user starts typing
     setErrors({
       ...errors,
-      [name]: ""
+      [name]: "",
     });
   };
 
@@ -54,22 +54,25 @@ const FindDoctor = () => {
     }
 
     try {
-      const response = await fetch("https://medscraft-medscraftserver.fcxl63.easypanel.host/api/clinicvisits", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json"
-        },
-        body: JSON.stringify(formData)
-      });
+      const response = await fetch(
+        "https://medscraft-medscraftserver.fcxl63.easypanel.host/api/clinicvisits",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(formData),
+        }
+      );
 
       const result = await response.json();
       if (response.ok) {
         // Show success SweetAlert
         await Swal.fire({
-          icon: 'success',
-          title: 'Appointment Booked!',
-          text: 'Thanks for Booking, our Team will contact you soon',
-          confirmButtonText: 'OK'
+          icon: "success",
+          title: "Appointment Booked!",
+          text: "Thanks for Booking, our Team will contact you soon",
+          confirmButtonText: "OK",
         });
         // Reset form and errors
         setFormData({
@@ -78,26 +81,26 @@ const FindDoctor = () => {
           email: "",
           age: "",
           location: "",
-          area: ""
+          area: "",
         });
         setErrors({});
       } else {
         // Show error SweetAlert
         await Swal.fire({
-          icon: 'error',
-          title: 'Oops...',
-          text: result.error || 'Something went wrong. Please try again.',
-          confirmButtonText: 'OK'
+          icon: "error",
+          title: "Oops...",
+          text: result.error || "Something went wrong. Please try again.",
+          confirmButtonText: "OK",
         });
       }
     } catch (error) {
       console.error("Error booking appointment:", error);
       // Show error SweetAlert
       await Swal.fire({
-        icon: 'error',
-        title: 'Error',
-        text: 'Error booking appointment. Please try again later.',
-        confirmButtonText: 'OK'
+        icon: "error",
+        title: "Error",
+        text: "Error booking appointment. Please try again later.",
+        confirmButtonText: "OK",
       });
     }
   };
@@ -113,8 +116,10 @@ const FindDoctor = () => {
   };
   useEffect(() => {
     $("#sliderSyncingNav").slick({
-      prevArrow: '<span class="fas fa-arrow-left slick-arrow slick-arrow-soft-white slick-arrow-left slick-arrow-centered-y rounded-circle ml-sm-2 ml-xl-4"></span>',
-      nextArrow: '<span class="fas fa-arrow-right slick-arrow slick-arrow-soft-white slick-arrow-right slick-arrow-centered-y rounded-circle mr-sm-2 mr-xl-4"></span>',
+      prevArrow:
+        '<span class="fas fa-arrow-left slick-arrow slick-arrow-soft-white slick-arrow-left slick-arrow-centered-y rounded-circle ml-sm-2 ml-xl-4"></span>',
+      nextArrow:
+        '<span class="fas fa-arrow-right slick-arrow slick-arrow-soft-white slick-arrow-right slick-arrow-centered-y rounded-circle mr-sm-2 mr-xl-4"></span>',
       infinite: true,
       asNavFor: "#sliderSyncingThumb",
     });
@@ -137,8 +142,10 @@ const FindDoctor = () => {
     });
 
     $(".slider-container").slick({
-      prevArrow: '<span class="fas fa-arrow-left slick-arrow slick-arrow-soft-white slick-arrow-left slick-arrow-centered-y rounded-circle ml-sm-2 ml-xl-4"></span>',
-      nextArrow: '<span class="fas fa-arrow-right slick-arrow slick-arrow-soft-white slick-arrow-right slick-arrow-centered-y rounded-circle mr-sm-2 mr-xl-4"></span>',
+      prevArrow:
+        '<span class="fas fa-arrow-left slick-arrow slick-arrow-soft-white slick-arrow-left slick-arrow-centered-y rounded-circle ml-sm-2 ml-xl-4"></span>',
+      nextArrow:
+        '<span class="fas fa-arrow-right slick-arrow slick-arrow-soft-white slick-arrow-right slick-arrow-centered-y rounded-circle mr-sm-2 mr-xl-4"></span>',
       slidesToShow: 3,
       responsive: [
         {
@@ -161,37 +168,47 @@ const FindDoctor = () => {
     { img: Depression, title: "Mental distress", link: "/diseases" },
   ];
 
+  
+  const scrollToAppointment = () => {
+    if (appointmentRef.current) {
+      appointmentRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <>
       <div className="container-fluid">
         <div className="row banner-body">
           <div className="col-lg-7 col-md-7 col-sm-12 col-12 ">
             <div className="mt-4 p-3">
-              <h2 className="text-light">
+              {/* <h2 className="text-light">
+                End to end care from Top Surgeons at our MedsCraft Clinic
+              </h2> */}
+              <h2 className="text-light mt-3">
                 End to end care from Top Surgeons at our MedsCraft Clinic
               </h2>
-              <h4 className="text-light mt-3">
-                Talk to our care expert today to book your consultation. All
-                insurance accepted
-              </h4>
               <div className="col-lg-7 col-md-10 col-12 col-sm-12  mt-5">
-                <a className="insideboxtxt" href="tel:8088435500">
-                  Reach out to Us On <span> 8088435500</span>
+                <a className="insideboxtxt" onClick={scrollToAppointment}>
+                  Book Appointment
                 </a>
               </div>
             </div>
           </div>
           <div className="col-lg-5">
-            <img src={bannerimg1} className="banner-img w-100 " height="100px" alt="Banner" />
+            <img
+              src={bannerimg1}
+              className="banner-img w-100 "
+              height="100px"
+              alt="Banner"
+            />
           </div>
         </div>
       </div>
 
       <div className="container-fluid">
         <div className="row mt-4 mb-4">
-          <div className="col-lg-8 col-md-8 col-sm-12">
+          <div className="col-lg-8 col-md-8 col-sm-12 order-last order-md-first">
             <h3>We are experts in Surgical solutions for 50+ ailments.</h3>
-
             <div className="card inser-content mt-4">
               <div className="card-body">
                 <div className="consultation-container">
@@ -286,8 +303,8 @@ const FindDoctor = () => {
             </div> */}
           </div>
 
-          <div className="col-lg-4 col-md-4 col-sm-12 col-12 main-containerdiv mb-5">
-            <div className="find-containerdiv">
+          <div className="col-lg-4 col-md-4 col-sm-12 col-12 order-lg-first order-md-last main-containerdiv12 mb-5"  ref={appointmentRef}>
+            <div className="find-containerdiv12">
               <h3 className="text-center">Book your consultation today</h3>
               <form onSubmit={handleSubmit}>
                 <div>
@@ -296,10 +313,14 @@ const FindDoctor = () => {
                     name="name"
                     value={formData.name}
                     onChange={handleInputChange}
-                    className={`mt-3 form-control ${errors.name ? 'is-invalid' : ''}`}
+                    className={`mt-3 form-control ${
+                      errors.name ? "is-invalid" : ""
+                    }`}
                     placeholder="Enter Your Name"
                   />
-                  {errors.name && <div className="invalid-feedback">{errors.name}</div>}
+                  {errors.name && (
+                    <div className="invalid-feedback">{errors.name}</div>
+                  )}
                 </div>
                 <div>
                   <input
@@ -307,10 +328,14 @@ const FindDoctor = () => {
                     name="mobile"
                     value={formData.mobile}
                     onChange={handleInputChange}
-                    className={`mt-3 form-control ${errors.mobile ? 'is-invalid' : ''}`}
+                    className={`mt-3 form-control ${
+                      errors.mobile ? "is-invalid" : ""
+                    }`}
                     placeholder="Enter Your Mobile No"
                   />
-                  {errors.mobile && <div className="invalid-feedback">{errors.mobile}</div>}
+                  {errors.mobile && (
+                    <div className="invalid-feedback">{errors.mobile}</div>
+                  )}
                 </div>
                 <div>
                   <input
@@ -318,10 +343,14 @@ const FindDoctor = () => {
                     name="email"
                     value={formData.email}
                     onChange={handleInputChange}
-                    className={`mt-3 form-control ${errors.email ? 'is-invalid' : ''}`}
+                    className={`mt-3 form-control ${
+                      errors.email ? "is-invalid" : ""
+                    }`}
                     placeholder="Enter Your Email"
                   />
-                  {errors.email && <div className="invalid-feedback">{errors.email}</div>}
+                  {errors.email && (
+                    <div className="invalid-feedback">{errors.email}</div>
+                  )}
                 </div>
                 <div>
                   <input
@@ -329,23 +358,31 @@ const FindDoctor = () => {
                     name="age"
                     value={formData.age}
                     onChange={handleInputChange}
-                    className={`mt-3 form-control ${errors.age ? 'is-invalid' : ''}`}
+                    className={`mt-3 form-control ${
+                      errors.age ? "is-invalid" : ""
+                    }`}
                     placeholder="Enter Your Age"
                   />
-                  {errors.age && <div className="invalid-feedback">{errors.age}</div>}
+                  {errors.age && (
+                    <div className="invalid-feedback">{errors.age}</div>
+                  )}
                 </div>
                 <div>
                   <select
                     name="location"
                     value={formData.location}
                     onChange={handleInputChange}
-                    className={`form-select mt-3 ${errors.location ? 'is-invalid' : ''}`}
+                    className={`form-select mt-3 ${
+                      errors.location ? "is-invalid" : ""
+                    }`}
                   >
                     <option value="">Location</option>
                     <option value="Bangalore">Bangalore</option>
                     <option value="Gurugram">Gurugram</option>
                   </select>
-                  {errors.location && <div className="invalid-feedback">{errors.location}</div>}
+                  {errors.location && (
+                    <div className="invalid-feedback">{errors.location}</div>
+                  )}
                 </div>
                 <div>
                   <input
@@ -353,10 +390,14 @@ const FindDoctor = () => {
                     name="area"
                     value={formData.area}
                     onChange={handleInputChange}
-                    className={`mt-3 form-control ${errors.area ? 'is-invalid' : ''}`}
+                    className={`mt-3 form-control ${
+                      errors.area ? "is-invalid" : ""
+                    }`}
                     placeholder="Your Area"
                   />
-                  {errors.area && <div className="invalid-feedback">{errors.area}</div>}
+                  {errors.area && (
+                    <div className="invalid-feedback">{errors.area}</div>
+                  )}
                 </div>
                 <div>
                   <button type="submit" className="Appoinmentbtn mt-3">

@@ -41,6 +41,7 @@
       flex-direction: column;
       height: auto;
       padding: 1em;
+      align-items: center;
     }
   
     .inside-box {
@@ -50,7 +51,8 @@
     }
   
     .banner-img {
-      height: 200px;
+      margin-top: 4%;
+      height: 150px;
       width: 100%;
     }
   
@@ -168,7 +170,7 @@
     );
   }
   
-  .main-containerdiv {
+  .main-containerdiv13 {
     position: sticky;
     top: 0%;
     right: 0;
@@ -180,25 +182,27 @@
     /* overflow-y: auto; */
   }
   @media screen and (max-width: 768px) {
-    .main-containerdiv {
-      height: auto;
-      width: 100%;
+    .main-containerdiv13 {
+      position: relative; /* Change to relative on mobile to avoid sticky */
+      height: auto; /* Allow height to adjust based on content */
+      width: 100%; /* Full width on mobile */
+      padding: 10px; /* Adjust padding for mobile */
     }
   }
   @media screen and (max-width: 998px) {
-    .main-containerdiv {
+    .main-containerdiv13 {
       height: auto;
       width: 100%;
     }
   }
   
   @media screen and (max-width: 1024px) {
-    .main-containerdiv {
+    .main-containerdiv13 {
       height: auto;
       width: 100%;
     }
   }
-  .find-containerdiv {
+  .find-containerdiv13 {
     background-color: #ffff;
     padding: 20px 20px;
     box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;

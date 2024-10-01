@@ -1,0 +1,62 @@
+.family-banner{
+    background-color: #b0d2f5;
+}
+.f-h2{
+    font-size: 50px;
+    font-weight: lighter;
+}
+.f-h4{
+    font-size: 50px;
+    font-weight: bolder;
+}
+@media screen and (max-width: 768px){
+    .f-h2{
+        font-size: 20px;
+        font-weight: lighter;
+    }
+    .f-h4{
+        margin-top: 0%;
+        font-size: 20px;
+        font-weight: bolder;
+    }
+    .f-but{
+        width: 200px;
+        margin-left: 20%;
+    }
+    
+
+} 
+.f-card{
+
+    height: 160px;
+    padding: 1em;
+    text-align: start;
+    border-top-right-radius: 40px;
+  box-shadow: rgb(40, 215, 235) 2px 2px 3px;
+}
+.family-img{
+    height: 60px;
+    border-radius: 50px;
+}
+
+.use-meds{
+    padding: 2em;
+    border-radius: 20px;
+    background-color: #DDEEFF;
+    border: 1px solid rgb(40, 215, 235);
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    
+}
+.family-img1{
+    height:30px;
+}
+.use-h4{
+    font-size: larger;
+}
+/* .head-card{
+     display: grid;
+     grid-template-columns: 2fr 2fr 2fr;
+}
+.f-card{
+    width: 200px;
+} */
